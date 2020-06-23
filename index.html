@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script defer src="scripts/scripts.js"></script>
+</head>
+<body>
+
+<!-- <div class="alert_list">
+    <div class="error">
+        <p>Ошибка!</p>
+    </div>
+    <div class="alert">
+        <p>Привет мир!</p>
+    </div>
+    <div class="msg">
+        <p>Ваше сообщение отправлено</p>
+    </div>
+</div> -->
+
+<section class="contacts">    
+            <h3>Contact us</h3>
+    
+            <form method="post">
+                <div class="post_wrapper">
+                    <fieldset>
+                        <input required placeholder="Your name *" type="text" minlength="2" maxlength="100" name="user_name" /><br />
+                        <input required placeholder="Your e-mail *" type="email" minlength="2" maxlength="100" name="user_email" /><br />
+                        <input placeholder="Subject" type="text" minlength="2" maxlength="100" name="user_subject" />
+                    </fieldset>
+                    <fieldset>
+                        <textarea required placeholder="Your message *" minlength="2" maxlength="1000" name="user_message"></textarea>
+                    </fieldset>
+                </div>
+                <button class="button_send" onclick="error()">Send message</button>
+            </form>
+    
+</section>   
+</body>
+</html>

@@ -1,0 +1,100 @@
+    /* Уведомления */
+.alert_list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.error,
+.alert,
+.msg {
+    display: block;
+    width: 200px;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px 3px #b1a1a1d3;
+}    
+.error {
+    background-color: rgb(240, 88, 88);
+}
+.alert {
+    background-color: rgba(0, 69, 219);
+}
+.msg {
+    background-color: rgb(109, 233, 109);
+}
+
+    /* Блок Contact us */
+
+.contacts {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #222;
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+.contacts h3 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 20px;
+}
+.contacts p {
+    font-family: DroidSerif_Italic;
+    font-size: 16px;
+    color: #777777;
+    text-align: center;
+    padding-bottom: 80px;
+}
+form {
+    text-align: center;
+    padding-bottom: 120px;
+}
+fieldset {
+    border: none;
+    width: calc(50% - 15px);
+}
+    
+input:not(:last-child){
+    margin-bottom: 30px;
+}    
+.contacts input,
+.contacts textarea {
+    width: calc(100% - 40px);
+    padding: 20px;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #bbb;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}   
+textarea {
+    resize: none;
+    height: calc(100% - 40px);
+ }  
+.post_wrapper {
+     display: flex;
+    justify-content: space-between;
+}  
+.button_send {
+    border: 0;
+    background-color: #fed136;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    width: 240px;
+    padding: 25px 0;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 30px
+}
