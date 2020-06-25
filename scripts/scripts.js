@@ -1,37 +1,21 @@
-let alerts = function() {
-    parentElement = document.createElement('div');
+
+let message = function(type, msg) {
+    let parentElement = document.createElement('div');
+        element = document.createElement('div'),
+
     parentElement.classList.add('alert_list');
-
     document.body.insertBefore(parentElement, document.querySelector('.contacts'));
+
+    element.classList.add(type);
+    element.innerHTML = msg;
+    parentElement.appendChild(element);
+
+    setTimeout(() => {element.remove()}, 3000);
 }
-alerts();
-
-let error = function() {
-    errorElement = document.createElement('div');
-    errorElement.classList.add('error');
-    errorElement.innerHTML = 'Ошибка!';
-
-    parentElement.appendChild(errorElement);
-    
-    setInterval(() => {document.querySelector('.error').remove()}, 5000);
-}
-
-let alert = function() {
-    alertElement = document.createElement('div');
-    alertElement.classList.add('alert');
-    alertElement.innerHTML = 'Привет Мир!';
-
-    parentElement.appendChild(alertElement);
-    setTimeout(() => {alertElement.remove()}, 5000);
-}
-
-let msg = function() {
-    msgElement = document.createElement('div');
-    msgElement.classList.add('msg');
-    msgElement.innerHTML = 'Сообщение отправлено';
-
-    parentElement.appendChild(msgElement);
-
-    setTimeout(() => {msgElement.remove()}, 5000);
-}
-alert();    
+let a = document.location.search,
+    b = /\?type=(.+)&msg=(.+)/,
+    type = a.match(b)[1],
+    msg = decodeURIComponent(a.match(b)[2]);
+    msg = msg.replace(/\+/g, ' ');
+console.log(msg);
+message(type, msg);
